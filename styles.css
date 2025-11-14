@@ -1,0 +1,370 @@
+/* CSS Variables */
+:root {
+    --grey1: #111111;
+    --grey2: #555555;
+    --grey3: #999999;
+    --wash2: #f6f6f6;
+    --backgroundcolor: #ffffff;
+    --contentpaddinghorizontal: 24px;
+    --contentpaddingvertical: 24px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--grey1);
+    background-color: var(--backgroundcolor);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 var(--contentpaddinghorizontal);
+    background-color: var(--backgroundcolor);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 540px;
+    width: 100%;
+    padding: var(--contentpaddingvertical) 0;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.1px;
+    color: var(--grey1);
+}
+
+h2 {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.021px;
+    color: var(--grey1);
+}
+
+h3 {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0.021px;
+    color: var(--grey1);
+}
+
+p {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.021px;
+    color: var(--grey2);
+}
+
+a {
+    color: var(--grey1);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.header {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.profile-photo {
+    flex-shrink: 0;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+}
+
+.info h1 {
+    margin: 0;
+    width: 100%;
+}
+
+.subtitle {
+    color: var(--grey2);
+    width: 100%;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 0;
+}
+
+.website-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    padding: 1.8px 10px 3px;
+    background-color: var(--wash2);
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--grey2);
+    white-space: nowrap;
+    width: fit-content;
+    margin-top: 0;
+}
+
+.profile-about {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    padding-top: 36px;
+}
+
+.profile-about h2 {
+    height: 26px;
+    margin: 0;
+}
+
+.profile-about p {
+    width: 100%;
+    margin: 0;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.section h3 {
+    width: 100%;
+    margin: 0;
+}
+
+/* Item Container */
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.section-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 24px;
+}
+
+.section-item:first-child {
+    padding-top: 24px;
+}
+
+.item-container:not(:first-child) .section-item {
+    padding-top: 36px;
+}
+
+.duration {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 0;
+    color: var(--grey3);
+    flex-shrink: 0;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+.link {
+    display: flex;
+    gap: 2px;
+    align-items: flex-start;
+    max-width: 415.5px;
+    width: 100%;
+}
+
+.link p {
+    color: var(--grey1);
+    margin: 0;
+}
+
+.external-link {
+    display: inline;
+    font-size: 0.9em;
+    vertical-align: 0.1em;
+    margin-left: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 0;
+    opacity: 0.8;
+}
+
+.location {
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.location p {
+    max-width: 540px;
+    width: 100%;
+    margin: 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.description p {
+    max-width: 540px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Item */
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 24px 0 8px;
+}
+
+.contact-item .platform {
+    width: 100%;
+    padding-right: 0;
+    padding-bottom: 0;
+    color: var(--grey3);
+    flex-shrink: 0;
+}
+
+.contact-item .link {
+    width: 100%;
+    max-width: 415.5px;
+    min-width: 0;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    :root {
+        --contentpaddinghorizontal: 48px;
+        --contentpaddingvertical: 72px;
+    }
+
+    .section-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .duration {
+        width: 88.5px;
+        padding-right: 36px;
+        padding-bottom: 0;
+    }
+
+    .content-item {
+        flex: 1;
+        min-width: 0;
+        padding-left: 0;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contact-item .platform {
+        width: 88.5px;
+        padding-right: 36px;
+    }
+
+    .contact-item .link {
+        flex: 1;
+        max-width: 415.5px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .container {
+        padding: 0;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: var(--grey3);
+    }
+}
+
